@@ -1,5 +1,6 @@
+// Imported mongoose schema
 const { Schema } = require('mongoose');
-
+// Created bookMovieSchema schema
 const bookMovieSchema = new Schema({
     movie: Schema.Types.String,
     slot: Schema.Types.String,
@@ -13,5 +14,5 @@ const bookMovieSchema = new Schema({
     }
 
 })
-
+// Exported schema
 exports.bookMovieSchema = bookMovieSchema;
