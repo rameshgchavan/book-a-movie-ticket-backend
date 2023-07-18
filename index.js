@@ -14,7 +14,7 @@ const cors = require('cors')
 // Used cors into express
 app.use(cors())
 // Imported API router
-const movieAPI = require("./api");
+const movieAPI = require("./src/api");
 // Used API into express
 app.use(movieAPI);
 // Listening on port 8080
