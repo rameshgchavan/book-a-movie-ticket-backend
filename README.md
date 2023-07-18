@@ -3,7 +3,7 @@
 ## About this server
 
 The purpose of this server is:
-1. Handle http requests received from frontend: [Book a movie ticket App](https://github.com/rameshgchavan/book-a-movie-ticket-frontend/tree/main) and 
+1. Handle http requests received from frontend: [Book a movie ticket App](https://github.com/rameshgchavan/book-a-movie-ticket-frontend) and 
 2. Store data to or retrive data from database.
 
 ### `Project files structure`
