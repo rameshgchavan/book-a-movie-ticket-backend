@@ -7,7 +7,7 @@ The purpose of this server is:
 2. Store data to or retrive data from database.
 
 ### `Project files structure`
-![image](https://github.com/rameshgchavan/book-a-movie-ticket-backend/assets/109573381/eab76fad-8a95-410d-9720-c639fdc8bbef)
+![image](https://github.com/rameshgchavan/book-a-movie-ticket-backend/assets/109573381/d92f4e1a-bda0-4c06-b48b-cc2e004de9ba)
 
 This project contains four js files 
 1. index.js
@@ -35,6 +35,10 @@ for cross-origin requests.
 
  Read more [cors](https://www.npmjs.com/package/cors)
 
+ ## schema.js
+This file contains schema of bookMovie collection and exports it as bookMovieSchema which will be used inside connector.js.\
+It uses mongoose's schema component.
+
 ## connector.js
 This file contains code of connect to mongodb database using mongoose.\
 It uses bookMovie schema and export the connection using model which will be used inside api.js.
@@ -49,10 +53,6 @@ Read more [mongoDB](https://www.mongodb.com/)
 mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
 
 Read more [mongoose](https://www.npmjs.com/package/mongoose)
-
-## schema.js
-This file contains schema of bookMovie collection and exports it as bookMovieSchema which will be used inside connector.js.\
-It uses mongoose's schema component.
 
 ## api.js
 In this file I have imported connection (connector.js).\
