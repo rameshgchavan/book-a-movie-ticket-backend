@@ -23,6 +23,9 @@ const movieAPI = require("./src/api");
 // Used API into express
 app.use(movieAPI);
 
+//Run frontend build
+app.use(express.static('./client/build'));
+
 // Listen on availabe PORT 8080
 app.listen(PORT, () => {
     try {
