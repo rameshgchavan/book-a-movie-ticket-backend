@@ -1,5 +1,6 @@
 // Imported mongoose schema
 const { Schema } = require('mongoose');
+
 // Created bookMovieSchema schema
 const bookMovieSchema = new Schema({
     movie: Schema.Types.String,
@@ -13,6 +14,6 @@ const bookMovieSchema = new Schema({
         D2: Schema.Types.Number
     }
 
-})
+});
 // Exported schema
 exports.bookMovieSchema = bookMovieSchema;
