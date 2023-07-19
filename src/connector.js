@@ -1,5 +1,5 @@
 // Local mongoDB URI with collection name
-const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+const mongoURI = "mongodb://127.0.0.1:27017/" + "bookMovie";
 // Imported mongoose
 const mongoose = require('mongoose');
 // Imported bookMovieSchema schema
