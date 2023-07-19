@@ -19,4 +19,12 @@ const movieAPI = require("./src/api");
 // Used API into express
 app.use(movieAPI);
 // Listening on port 8080
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+app.listen(port, () => {
+    try {
+        console.log(`App listening on port ${port}!`);
+    }
+    catch (err) {
+        console.log("Connection failed for reason: " + err);
+    }
+
+});
