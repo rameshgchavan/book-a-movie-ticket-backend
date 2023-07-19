@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 // Created constant port
 const port = 8080;
+require("./src/connector");
 // used body parser into express
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
