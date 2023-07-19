@@ -3,7 +3,7 @@ require('mongodb');
 const dotEnv = require("dotenv");
 dotEnv.config();
 // const mongoURI = process.env.MONGODB_URL;
-const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+const mongoURI = "mongodb://127.0.0.1:27017/" + "bookMovie";
 // Imported mongoose
 let mongoose = require('mongoose');
 // Imported bookMovieSchema schema
