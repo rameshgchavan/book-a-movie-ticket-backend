@@ -1,4 +1,10 @@
+require("./src/connector");
+
+// setting environment to get PORT
 const dotEnv = require("dotenv");
+dotEnv.config();
+const PORT = process.env.PORT;
+
 // Imported express
 const express = require("express");
 // Created express object
@@ -17,9 +23,7 @@ const movieAPI = require("./src/api");
 // Used API into express
 app.use(movieAPI);
 
-dotEnv.config();
-const PORT = process.env.PORT;
-
+// Listen on availabe PORT 8080
 app.listen(PORT, () => {
     try {
         console.log(`App listening on port ${PORT}!`);
