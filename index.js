@@ -1,4 +1,3 @@
-require("./src/connector");
 const dotEnv = require("dotenv");
 // Imported express
 const express = require("express");
