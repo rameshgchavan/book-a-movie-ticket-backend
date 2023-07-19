@@ -1,4 +1,4 @@
-require("./src/connector");
+
 // Imported express
 const express = require("express");
 // Created express object
@@ -28,3 +28,5 @@ app.listen(port, () => {
     }
 
 });
+
+require("./src/connector");
