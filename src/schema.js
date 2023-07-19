@@ -1,20 +1,18 @@
 // Imported mongoose schema
-const mongoose = require('mongoose');
+const { Schema } = require('mongoose');
 // Created bookMovieSchema schema
-const bookMovieSchema = new mongoose.Schema({
-    movie: String,
-    slot: String,
+const bookMovieSchema = new Schema({
+    movie: Schema.Types.String,
+    slot: Schema.Types.String,
     seats: {
-        A1: Number,
-        A2: Number,
-        A3: Number,
-        A4: Number,
-        D1: Number,
-        D2: Number
+        A1: Schema.Types.Number,
+        A2: Schema.Types.Number,
+        A3: Schema.Types.Number,
+        A4: Schema.Types.Number,
+        D1: Schema.Types.Number,
+        D2: Schema.Types.Number
     }
 
 })
 // Exported schema
-
-// Model created using book movie schema and exported
-module.exports.bookMovieModel = mongoose.model('bookmovietickets', bookMovieSchema);
+exports.bookMovieSchema = bookMovieSchema;
