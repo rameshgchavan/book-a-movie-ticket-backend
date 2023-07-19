@@ -5,16 +5,12 @@ const mongoose = require('mongoose');
 // Imported bookMovieSchema schema
 const { bookMovieSchema } = require('./schema');
 // To establish mongoose server connection
-const connection = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("connection established with mongodb server online");
-        // Model created using book movie schema
-        return mongoose.model('bookmovietickets', bookMovieSchema);
-    })
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => { console.log("connection established with mongodb server online"); })
     .catch(err => {
         console.log("error while connection", err)
     });
 // Model created using book movie schema
-// const collection_connection = mongoose.model('bookmovietickets', bookMovieSchema);
+const collection_connection = mongoose.model('bookmovietickets', bookMovieSchema);
 // Exported model 
-module.exports = connection;
+exports.connection = collection_connection;
