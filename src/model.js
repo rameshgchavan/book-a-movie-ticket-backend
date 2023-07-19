@@ -1,4 +1,6 @@
+// Imported mongoose
 const mongoose = require("mongoose");
+
 // Imported bookMovieSchema schema
 const { bookMovieSchema } = require('./schema');
 
