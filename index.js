@@ -17,7 +17,6 @@ app.use(cors())
 const movieAPI = require("./src/api");
 // Used API into express
 app.use(movieAPI);
-// Listening on port 8080
 
 dotEnv.config();
 const PORT = process.env.PORT;
