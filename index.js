@@ -1,3 +1,4 @@
+require("./src/connector");
 // Imported express
 const express = require("express");
 // Created express object
