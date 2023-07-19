@@ -11,7 +11,14 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("error while connection", err)
     });
 // Model created using book movie schema
-console.log("RameshConnect")
+
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose is connected.')
+});
+
+mongoose.connection.on('error', (err) => {
+    console.log(`Mongoose not connected: ${err}`)
+});
 const collection_connection = mongoose.model('bookmovietickets', bookMovieSchema);
 // Exported model 
 exports.connection = collection_connection;
