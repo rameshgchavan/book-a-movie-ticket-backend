@@ -1,8 +1,9 @@
+require('mongodb');
 // Local mongoDB URI with collection name
 const dotEnv = require("dotenv");
 dotEnv.config();
-const mongoURI = process.env.MONGODB_URL;
-// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+// const mongoURI = process.env.MONGODB_URL;
+const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
 // Imported mongoose
 const mongoose = require('mongoose');
 // Imported bookMovieSchema schema
