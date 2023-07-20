@@ -11,9 +11,9 @@ The purpose of this server is:
 
 This project contains five js files 
 1. index.js
-2. schema.js
-3. model.js
-4. connector.js and
+2. connector.js
+3. schema.js
+4. model.js and 
 5. api.js
 
 ## index.js
