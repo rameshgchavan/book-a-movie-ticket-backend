@@ -9,14 +9,16 @@ The purpose of this server is:
 ### `Project files structure`
 ![image](https://github.com/rameshgchavan/book-a-movie-ticket-backend/assets/109573381/d92f4e1a-bda0-4c06-b48b-cc2e004de9ba)
 
-This project contains four js files 
+This project contains five js files 
 1. index.js
 2. schema.js
-3. connector.js and
-4. api.js
+3. model.js
+4. connector.js and
+5. api.js
 
 ## index.js
-Its a main file of project in which express js has used to use body-parser, cors, api (route) and listening a port 8080.
+Its a main file of project in which express js has used to use body-parser, cors, api (route) and listening a port 8080.\
+and imported mongodb connection (src/connector.js)
 
  ### `express js`
   express js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
@@ -35,13 +37,8 @@ for cross-origin requests.
 
  Read more [cors](https://www.npmjs.com/package/cors)
 
- ## schema.js
-This file contains schema of bookMovie collection and exports it as bookMovieSchema which will be used inside connector.js.\
-It uses mongoose's schema component.
-
-## connector.js
-This file contains code of connect to mongodb database using mongoose.\
-It uses bookMovie schema and export the connection using model which will be used inside api.js.
+ ## connector.js
+This file contains code of connect to mongodb database using mongoose and exported connection which will be used inside index.js.
 
 ### `mongoDB`
 mongoDB is a source-available cross-platform document-oriented database program.\
@@ -54,8 +51,15 @@ mongoose is a MongoDB object modeling tool designed to work in an asynchronous e
 
 Read more [mongoose](https://www.npmjs.com/package/mongoose)
 
+ ## schema.js
+This file contains schema documentation of bookMovie collection and exports it as bookMovieSchema which will be imported inside model.js.\
+It uses mongoose's schema component.
+
+ ## model.js
+ In this file bookMovieSchema schema imported and exported as model bookMovieModel with collection name which will be used inside api.js
+
 ## api.js
-In this file I have imported connection (connector.js).\
+In this file I have imported model bookMovieModel (model.js).\
 Using express router I have created two api (routes) get and post and exported router as module which will be used inside index.js
 ### `get api`
 This api finds the user (frontend) requested data into mongoDB database and send back response to user.
@@ -64,11 +68,14 @@ This api store the user (frontend) requested data into mongoDB database and send
 
 ## Prerequisites
 Need to install 
-1. [mongoDB](https://www.mongodb.com/try/download/shell)
-2. [nodemon](https://www.npmjs.com/package/nodemon)
+1. mongoDB [Download](https://www.mongodb.com/try/download/community)
+2. Install nodemon globally: `npm install -g nodemon` [Read more](https://www.npmjs.com/package/nodemon)
 
-## Script to run app
+## Script to run server
 ### `npm start`
+### `npm run dev`
+`npm run dev` recommended if nodemon installed.
+
 Runs the app in the development mode.\
 Using uri http://localhost:8080/api/booking you can test above given API in [Postman](https://www.postman.com/downloads/) 
 
