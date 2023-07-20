@@ -71,6 +71,16 @@ Need to install
 1. mongoDB [Download](https://www.mongodb.com/try/download/community)
 2. Install nodemon globally: `npm install -g nodemon` [Read more](https://www.npmjs.com/package/nodemon)
 
+## Step to get this repo on local machine and execution
+1. Go to Code button and download zip file.\
+![image](https://github.com/rameshgchavan/book-a-movie-ticket-frontend/assets/109573381/351ccc07-7a8b-4067-a98b-f1a4cd4f2112)
+2. Unzip file and type `cmd` inside address bar of file explorer and hit Enter, command prompt will open.\
+![image](https://github.com/rameshgchavan/book-a-movie-ticket-backend/assets/109573381/20ea484f-e5a4-4c41-b196-ee55a3696ae4)
+3. In command prompt type `npm install`. It will downloads and installs all required packages.\
+   Have patience that will take some time.
+4. After installations of packages you can type `code .` and hit Enter, the project will open in [VS Code](https://code.visualstudio.com/download)\
+   or type following scrips in command prompt.
+
 ## Script to run server
 ### `npm start`
 ### `npm run dev`
